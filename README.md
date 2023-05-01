@@ -2,7 +2,12 @@
 
 ## Context / idea
 
-As it's currently not possible to create a banner in a repository by using GitHub API, this browser extension is filling the gap.
+The Jenkins plugins are often maintained by multiple persons.
+When there is a security release in progress, the maintainer providing the correction would like to avoid the others to merge code, so that the merge cost can be pre-paid.
+
+As it's [currently not possible](https://github.com/orgs/community/discussions/11478) to create a banner in a repository by using GitHub API, this browser extension is filling the gap.
+
+The idea is to simulate something similar to what was done for the [Dependabot alerts](https://github.blog/changelog/2022-10-28-yellow-security-vulnerability-repository-banner-is-being-removed/).
 
 By creating security advisories within GitHub, we can leverage this repository admin-only information, to share the information in a visible fashion.
 
@@ -29,13 +34,13 @@ We want them to avoid merging anything to the repository.
 Load the extension in your browser:
 
 - For Firefox: 
-  - Open Firefox and navigate to about:debugging. 
+  - Open Firefox and navigate to `about:debugging`. 
   - Click on the "This Firefox" tab and then click on the "Load Temporary Add-on" button.
   - Select the manifest-firefox.json file from the directory of your extension.
   - The extension will need to get the permissions to read/write content, you can grant it by clicking on its icon inside the puzzle icon.
 
 - For Chrome: 
-  - Open Chrome and navigate to chrome://extensions.
+  - Open Chrome and navigate to `chrome://extensions`.
   - Enable the "Developer mode" toggle and click on the "Load unpacked" button.
   - Select the directory of your extension.
 
